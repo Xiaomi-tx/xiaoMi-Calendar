@@ -6,6 +6,7 @@ class Calendar {
       this.rl = document.querySelector("#data");
       this.YearDom = document.querySelector("#year");
       this.MonthDom = document.querySelector("#month");
+      this.atMonth = this.date.getMonth();
       this.MonthArr = [
         "一月",
         "二月",
@@ -43,7 +44,7 @@ class Calendar {
       }
 
       for (let i = 1; i <= this.days; i++) {
-        if (i == this.atDay) {
+        if (i == this.atDay && this.atMonth == this.Month) {
           this.html += `<li style="background:skyblue">${i}</li>`;
         } else {
           this.html += `<li>${i}</li>`;
